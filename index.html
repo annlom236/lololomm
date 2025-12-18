@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lomova production</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1abf80;
+            --accent: #a2307e;
+            --bg-light: #F8F9FC;
+            --bg-white: #FFFFFF;
+            --text-dark: #1a0c18;
+            --text-muted: #3d0021;
+            --border: #E2E8F0;
+            --shadow: 0 4px 16px rgba(91, 127, 232, 0.12);
+            --shadow-lg: 0 8px 32px rgba(91, 127, 232, 0.16);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4rem 2rem;
+        }
+
+        .bg-white {
+            background: var(--bg-white);
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.3rem; margin-bottom: 2rem; text-align: center; }
+        h3 { color: var(--primary); margin-bottom: 1rem; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0.4rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Project button fix */
+        .project-button {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        /* About photos */
+        .about-photos {
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .about-photos img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow);
+        }
+
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-photos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">LOMOVA</div>
+        <ul>
+            <li><a href="#about">Кто я?</a></li>
+            <li><a href="#skills">Мой путь</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <img class="profile-photo" src="https://sun9-64.userapi.com/s/v1/ig2/rRKi_FeHWz-7v9nmOEvgTdPLh2L9iJuHUl0kdXknzOyCf0OrnZzgWWCEMakQKi_XQtqkC39BNTZJBR2_1Sluftzy.jpg?quality=95&as=32x34,48x51,72x76,108x114,160x169,240x253,360x380,480x506,540x569,640x675,720x759,1080x1139,1280x1349,1440x1518,2118x2233&from=bu&u=TMzz8HQubAUqoxvMOC-PyHjQcOm0vaFJIOPecXONcOk&cs=640x0">
+    <h1>Ломова Анна</h1>
+    <h3>Продюсер уровня Тарантино</h3>
+    <p>Создаю продающие видео, вызывающие эмоции и вопросы.</p>
+    <a href="#contact" class="btn btn-primary">Связаться</a>
+    <a href="#projects" class="btn btn-secondary">Мои проекты</a>
+</section>
+
+<section id="about" class="bg-white">
+    <h2>Кто я?</h2>
+    <article class="card">
+        <p>Меня зовут Анна Ломова и я ломаю границы виденья! Умудряюсь создавать видеокартины, которые известны во всём Лос-Анджелесе, при этом находясь в Иркутске.</p>
+        <p>Особенно у меня получается жарить яичницу! Кстати я сняла на эту тему рилс, который залетел на 50 просмотров!</p>
+        <p>В свободное время общаюсь со Стенли Кубиком.</p>
+
+        <div class="about-photos">
+            <img src="https://i.pinimg.com/736x/bc/47/dd/bc47dd9f6b39090b9fc0b7021636cfe2.jpg">
+            <img src="https://sun9-39.userapi.com/s/v1/ig2/q7JzF1il_jijv5qUJ19dU6QQuChWzYvNzRgah5bzJL3p7EGE0mmyMQ1RJnr9MZC5sjFjLjJBg-ECeq4nmn16zqj7.jpg?quality=95&as=32x29,48x43,72x64,108x97,160x143,240x215,360x322,480x430,540x484,640x573,720x645,1080x967,1280x1146,1440x1290,2560x2293&from=bu&u=YVbcCEjkbq_FK4GYWOInA1rC200yYOsI8JtHSkaqV9o&cs=640x0">
+            <img src="https://i.pinimg.com/1200x/fe/6f/31/fe6f3122db51e761235e832b64262d55.jpg">
+        </div>
+    </article>
+</section>
+
+<section id="skills">
+    <h2>Мой путь</h2>
+
+    <div class="cards-grid">
+        <article class="card">
+            <h3>Начало</h3>
+            <p>
+                Всё началось с желания делать видео не «как надо», а как чувствуется. Особенно остро это проявилось, когда я упала с крыши у бабули на дачке.
+                Я экспериментировала, пробовала, ошибалась и снова начинала. И теперь я магистр продюсирования. Да-да вот так всё просто!
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Формирование стиля</h3>
+            <p>
+                Со временем появился собственный почерк, внимание к деталям
+                и умение управлять эмоциями зрителя.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Сегодня</h3>
+            <p>
+                Сегодня я создаю видео, которые продают, цепляют и остаются в памяти.
+                Моя цель — делать контент, который возможно пролистать.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Мои проекты</h2>
+
+    <div class="cards-grid">
+        <article class="card">
+            <h3>Фильм достойный Оскара</h3>
+            <p>Сняла фильм, который восхищает, удивляет и вызывает множество вопросов у здравоохранительных органов. Фильм удостоен премии Оскара. Я лично присутсвовала на этом событии, правда это было в 4 фазе сна.</p>
+            <div class="project-button">
+                <a class="btn btn-outline" href="https://rutube.ru/video/87c72525c80e6c3a28f47c6beab13db0/" target="_blank">
+                    Ошарашеться
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <h3>Лучшая реклама</h3>
+            <p>Создание рекламного ролика, который цитировала вся страна, которая снилась людям на протяжении всего 21 века. Рекламы, которую поют детишкам на ночь...</p>
+            <div class="project-button">
+                <a class="btn btn-outline" href="https://rutube.ru/video/91d9178806a199f58ddd8e35071fe407/" target="_blank">
+                    Ознакомиться
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <h3>5000+ продаж</h3>
+            <p>Видео, после которого автор уехал.</p>
+            <div class="project-button">
+                <a class="btn btn-outline" href="https://super.ru/celebrity-news/16787" target="_blank">
+                    Ознакомиться (обязательно!!)
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section id="contact" class="bg-white">
+    <h2>Контакты</h2>
+    <p style="text-align:center;">
+        <a href="mailto:lololololomovanna@gmail.com">lololololomovanna@gmail.com</a>
+    </p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2025 Ломова Анна</p>
+</footer>
+
+</body>
+</html>
